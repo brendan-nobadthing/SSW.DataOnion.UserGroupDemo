@@ -26,9 +26,22 @@ namespace SSW.DataOnion.UserGroupDemo.VanillaEF.Migrations
                 {
                     FirstName = "Brendan",
                     LastName = "Richards",
-                    DateOfBirth = new DateTime(1977, 01, 11)
+                    DateOfBirth = new DateTime(2002, 05, 12)
                 });
 
+
+                context.Students.Add(new Student()
+                {
+                    FirstName = "Adam",
+                    LastName = "Cogan",
+                    DateOfBirth = new DateTime(2004, 03, 2)
+                });
+
+
+                context.Courses.Add(new Course()
+                {
+                    Title = "How To Win"
+                });
 
                 context.Schools.Add(new School()
                 {

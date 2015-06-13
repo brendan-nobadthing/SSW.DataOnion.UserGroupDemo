@@ -37,6 +37,8 @@ namespace SSW.DataOnion.UserGroupDemo.VanillaEF
 
         public IDbSet<School> Schools { get; set; }
 
+        public IDbSet<Course> Courses { get; set; }
+
 
     }
 }

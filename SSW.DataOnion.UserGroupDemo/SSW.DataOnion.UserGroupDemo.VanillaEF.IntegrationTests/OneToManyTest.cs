@@ -16,6 +16,9 @@ namespace SSW.DataOnion.UserGroupDemo.VanillaEF.IntegrationTests
         [Fact]
         public void DoOneToManyTest()
         {
+
+            DropDatabase.DropDb();
+
             using (var context = new DemoContextFactory().Create())
             {
                 var student = context.Students.FirstOrDefault(s => s.FirstName == "Brendan");

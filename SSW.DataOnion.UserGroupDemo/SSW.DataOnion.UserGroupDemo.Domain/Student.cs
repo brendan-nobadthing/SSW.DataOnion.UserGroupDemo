@@ -25,5 +25,7 @@ namespace SSW.DataOnion.UserGroupDemo.Domain
 
         public virtual ICollection<Enrolment> Enrolments { get; set; }
 
+        public virtual ICollection<Course> Courses { get; set; }
+
     }
 }

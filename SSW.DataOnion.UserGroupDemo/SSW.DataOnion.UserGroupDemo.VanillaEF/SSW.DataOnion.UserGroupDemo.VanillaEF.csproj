@@ -54,6 +54,14 @@
     <Compile Include="Migrations\201506130423195_InitialCreate.Designer.cs">
       <DependentUpon>201506130423195_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201506130511429_AddedCourses.cs" />
+    <Compile Include="Migrations\201506130511429_AddedCourses.Designer.cs">
+      <DependentUpon>201506130511429_AddedCourses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201506130539390_AddedCourses2.cs" />
+    <Compile Include="Migrations\201506130539390_AddedCourses2.Designer.cs">
+      <DependentUpon>201506130539390_AddedCourses2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -70,6 +78,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201506130423195_InitialCreate.resx">
       <DependentUpon>201506130423195_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506130511429_AddedCourses.resx">
+      <DependentUpon>201506130511429_AddedCourses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506130539390_AddedCourses2.resx">
+      <DependentUpon>201506130539390_AddedCourses2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
