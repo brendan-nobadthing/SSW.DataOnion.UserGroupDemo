@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SSW.DataOnion.UserGroupDemo.Domain;
-using SSW.DataOnion.UserGroupDemo.VanillaEF.cs;
+using SSW.DataOnion.UserGroupDemo.VanillaEF;
 using Xunit;
 
 namespace SSW.DataOnion.UserGroupDemo.VanillaEF.IntegrationTests

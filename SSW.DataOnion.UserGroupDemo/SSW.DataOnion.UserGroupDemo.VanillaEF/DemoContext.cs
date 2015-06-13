@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using SSW.DataOnion.UserGroupDemo.Domain;
 
-namespace SSW.DataOnion.UserGroupDemo.VanillaEF.cs
+namespace SSW.DataOnion.UserGroupDemo.VanillaEF
 {
     public class DemoContext : DbContext
     {

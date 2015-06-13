@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{32F07181-5A50-47F9-9874-C18E2E664ED1}</ProjectGuid>
+    <ProjectGuid>{2B4C9BDE-2B24-408F-B609-3B033B13A98F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SSW.DataOnion.UserGroupDemo.VanillaEF.cs</RootNamespace>
-    <AssemblyName>SSW.DataOnion.UserGroupDemo.VanillaEF.cs</AssemblyName>
+    <RootNamespace>SSW.DataOnion.UserGroupDemo.VanillaEF</RootNamespace>
+    <AssemblyName>SSW.DataOnion.UserGroupDemo.VanillaEF</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -53,14 +53,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\SSW.DataOnion.UserGroupDemo.Domain\SSW.DataOnion.UserGroupDemo.Domain.csproj">
       <Project>{c9356e55-0268-442f-b4ba-97bc65cfb908}</Project>
       <Name>SSW.DataOnion.UserGroupDemo.Domain</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -73,9 +73,9 @@
       <Project>{c9356e55-0268-442f-b4ba-97bc65cfb908}</Project>
       <Name>SSW.DataOnion.UserGroupDemo.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SSW.DataOnion.UserGroupDemo.VanillaEF.cs\SSW.DataOnion.UserGroupDemo.VanillaEF.cs.csproj">
-      <Project>{32f07181-5a50-47f9-9874-c18e2e664ed1}</Project>
-      <Name>SSW.DataOnion.UserGroupDemo.VanillaEF.cs</Name>
+    <ProjectReference Include="..\SSW.DataOnion.UserGroupDemo.VanillaEF\SSW.DataOnion.UserGroupDemo.VanillaEF.csproj">
+      <Project>{2b4c9bde-2b24-408f-b609-3b033b13a98f}</Project>
+      <Name>SSW.DataOnion.UserGroupDemo.VanillaEF</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
