@@ -19,8 +19,9 @@ namespace SSW.DataOnion.UserGroupDemo.VanillaEF
 
             if (!_hasSetInitializer)
             {
-                System.Data.Entity.Database.SetInitializer<DemoContext>(new DemoDropCreateAlways());
+                //System.Data.Entity.Database.SetInitializer<DemoContext>(new DemoDropCreateAlways());
                 //System.Data.Entity.Database.SetInitializer<DemoContext>(new DropCreateDatabaseIfModelChanges<DemoContext>());
+                System.Data.Entity.Database.SetInitializer<DemoContext>(new MigrateDatabaseToLatestVersion<DemoContext, Migrations.Configuration>());
                 _hasSetInitializer = true;
             }
 

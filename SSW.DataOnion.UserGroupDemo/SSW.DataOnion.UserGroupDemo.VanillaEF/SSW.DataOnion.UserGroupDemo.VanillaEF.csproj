@@ -50,6 +50,11 @@
     <Compile Include="DemoContextFactory.cs" />
     <Compile Include="DemoDropCreateAlways.cs" />
     <Compile Include="EntityConfig\StudentConfiguration.cs" />
+    <Compile Include="Migrations\201506130423195_InitialCreate.cs" />
+    <Compile Include="Migrations\201506130423195_InitialCreate.Designer.cs">
+      <DependentUpon>201506130423195_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -61,6 +66,11 @@
       <Project>{c9356e55-0268-442f-b4ba-97bc65cfb908}</Project>
       <Name>SSW.DataOnion.UserGroupDemo.Domain</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201506130423195_InitialCreate.resx">
+      <DependentUpon>201506130423195_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
