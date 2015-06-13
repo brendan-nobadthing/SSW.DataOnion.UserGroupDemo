@@ -27,5 +27,8 @@ namespace SSW.DataOnion.UserGroupDemo.Domain
 
         public virtual ICollection<Course> Courses { get; set; }
 
+
+        public virtual ICollection<Activity> Activities { get; set; }
+
     }
 }

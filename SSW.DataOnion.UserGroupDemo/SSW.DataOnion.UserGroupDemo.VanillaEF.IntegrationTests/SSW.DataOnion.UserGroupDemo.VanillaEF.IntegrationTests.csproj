@@ -67,6 +67,7 @@
     <Compile Include="DropDatabase.cs" />
     <Compile Include="HelloBddfy.cs" />
     <Compile Include="HelloXunit.cs" />
+    <Compile Include="InheritanceTests.cs" />
     <Compile Include="ManualReferenceLoading.cs" />
     <Compile Include="IncludeTest.cs" />
     <Compile Include="LazyLoadingReattachedEntity.cs" />

@@ -49,6 +49,7 @@
     <Compile Include="DemoContext.cs" />
     <Compile Include="DemoContextFactory.cs" />
     <Compile Include="DemoDropCreateAlways.cs" />
+    <Compile Include="EntityConfig\ActivityConfiguration.cs" />
     <Compile Include="EntityConfig\StudentConfiguration.cs" />
     <Compile Include="Migrations\201506130423195_InitialCreate.cs" />
     <Compile Include="Migrations\201506130423195_InitialCreate.Designer.cs">
@@ -61,6 +62,10 @@
     <Compile Include="Migrations\201506130539390_AddedCourses2.cs" />
     <Compile Include="Migrations\201506130539390_AddedCourses2.Designer.cs">
       <DependentUpon>201506130539390_AddedCourses2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201506130950329_InheritanceExample.cs" />
+    <Compile Include="Migrations\201506130950329_InheritanceExample.Designer.cs">
+      <DependentUpon>201506130950329_InheritanceExample.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -84,6 +89,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201506130539390_AddedCourses2.resx">
       <DependentUpon>201506130539390_AddedCourses2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506130950329_InheritanceExample.resx">
+      <DependentUpon>201506130950329_InheritanceExample.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

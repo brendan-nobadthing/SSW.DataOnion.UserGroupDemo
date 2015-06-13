@@ -14,6 +14,8 @@ namespace SSW.DataOnion.UserGroupDemo.VanillaEF.EntityConfig
         public StudentConfiguration()
         {
             Property(s => s.LastName).HasMaxLength(222);
+
+            HasMany(s => s.Activities).WithMany();
         }
     }
 }
