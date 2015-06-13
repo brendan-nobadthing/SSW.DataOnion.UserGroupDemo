@@ -7,7 +7,7 @@ using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SSW.DataOnion.UserGroupDemo.VanillaEF.cs
+namespace SSW.DataOnion.UserGroupDemo.VanillaEF
 {
     public class DemoContextFactory : IDbContextFactory<DemoContext>
     {

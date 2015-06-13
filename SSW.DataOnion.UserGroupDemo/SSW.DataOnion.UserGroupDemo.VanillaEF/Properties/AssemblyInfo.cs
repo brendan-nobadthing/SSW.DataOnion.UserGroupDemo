@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SSW.DataOnion.UserGroupDemo.VanillaEF.cs")]
+[assembly: AssemblyTitle("SSW.DataOnion.UserGroupDemo.VanillaEF")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SSW.DataOnion.UserGroupDemo.VanillaEF.cs")]
+[assembly: AssemblyProduct("SSW.DataOnion.UserGroupDemo.VanillaEF")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("27161a4c-4418-4f1c-a27d-131201cf5fa8")]
+[assembly: Guid("601645df-7b6b-4033-8099-26f64b7c62e8")]
 
 // Version information for an assembly consists of the following four values:
 //
