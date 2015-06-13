@@ -67,6 +67,9 @@
     <Compile Include="DropDatabase.cs" />
     <Compile Include="HelloBddfy.cs" />
     <Compile Include="HelloXunit.cs" />
+    <Compile Include="LazyLoadingReattachedEntity.cs" />
+    <Compile Include="LazyLoadingFailTest.cs" />
+    <Compile Include="LazyLoadingTests.cs" />
     <Compile Include="OneToManyTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ManyToManyTest.cs" />
