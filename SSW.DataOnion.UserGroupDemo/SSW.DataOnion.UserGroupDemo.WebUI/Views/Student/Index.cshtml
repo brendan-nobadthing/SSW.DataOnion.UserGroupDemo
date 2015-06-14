@@ -1,0 +1,26 @@
+﻿
+@model IEnumerable<SSW.DataOnion.UserGroupDemo.Domain.Student>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Students</h2>
+
+
+<table class="table table-striped table-bordered table-responsive">
+
+    @*Danger! iterating over a colleciton of entities with lazy loading  *@
+    @foreach (var student in Model)
+    {
+        <tr>
+            <td>@student.FirstName</td>
+            <td>@student.LastName</td>
+
+        </tr>
+        
+    }
+    
+
+</table>
+
