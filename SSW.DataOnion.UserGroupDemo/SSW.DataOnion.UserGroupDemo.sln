@@ -9,6 +9,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSW.DataOnion.UserGroupDemo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSW.DataOnion.UserGroupDemo.VanillaEF", "SSW.DataOnion.UserGroupDemo.VanillaEF\SSW.DataOnion.UserGroupDemo.VanillaEF.csproj", "{2B4C9BDE-2B24-408F-B609-3B033B13A98F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSW.DataOnion.UserGroupDemo.EFDataOnion", "SSW.DataOnion.UserGroupDemo.EFDataOnion\SSW.DataOnion.UserGroupDemo.EFDataOnion.csproj", "{319028FF-7A00-4006-B93C-7AD0B875E003}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSW.DataOnion.UserGroupDemo.EFDataOnion.IntTests", "SSW.DataOnion.UserGroupDemo.EFDataOnion.IntTests\SSW.DataOnion.UserGroupDemo.EFDataOnion.IntTests.csproj", "{07E07FE9-1945-4A29-8F1A-EEFDBD498CDC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSW.DataOnion.UserGroupDemo.DataInterfaces", "SSW.DataOnion.UserGroupDemo.DataInterfaces\SSW.DataOnion.UserGroupDemo.DataInterfaces.csproj", "{FFE3E05C-1D91-479E-9302-1050E8F1EC05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSW.DataOnion.UserGroupDemo.DependencyResolution", "SSW.DataOnion.UserGroupDemo.DependencyResolution\SSW.DataOnion.UserGroupDemo.DependencyResolution.csproj", "{141661DC-EAAD-46AB-AE00-18C1551DDD41}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +35,22 @@ Global
 		{2B4C9BDE-2B24-408F-B609-3B033B13A98F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B4C9BDE-2B24-408F-B609-3B033B13A98F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B4C9BDE-2B24-408F-B609-3B033B13A98F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{319028FF-7A00-4006-B93C-7AD0B875E003}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{319028FF-7A00-4006-B93C-7AD0B875E003}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{319028FF-7A00-4006-B93C-7AD0B875E003}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{319028FF-7A00-4006-B93C-7AD0B875E003}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07E07FE9-1945-4A29-8F1A-EEFDBD498CDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07E07FE9-1945-4A29-8F1A-EEFDBD498CDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07E07FE9-1945-4A29-8F1A-EEFDBD498CDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07E07FE9-1945-4A29-8F1A-EEFDBD498CDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFE3E05C-1D91-479E-9302-1050E8F1EC05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFE3E05C-1D91-479E-9302-1050E8F1EC05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFE3E05C-1D91-479E-9302-1050E8F1EC05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFE3E05C-1D91-479E-9302-1050E8F1EC05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{141661DC-EAAD-46AB-AE00-18C1551DDD41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{141661DC-EAAD-46AB-AE00-18C1551DDD41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{141661DC-EAAD-46AB-AE00-18C1551DDD41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{141661DC-EAAD-46AB-AE00-18C1551DDD41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

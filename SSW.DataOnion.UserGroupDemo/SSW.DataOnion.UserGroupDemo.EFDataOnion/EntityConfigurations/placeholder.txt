@@ -1,0 +1,11 @@
+﻿add your entity configuration files here http://msdn.microsoft.com/en-au/data/jj591617.aspx
+
+A sample:
+
+public class YourEntityConfigurations : EntityTypeConfiguration<YourEntity>
+{
+    public YourEntityConfigurations()
+    {
+        this.HasRequired(u => u.Property1);
+    }
+}

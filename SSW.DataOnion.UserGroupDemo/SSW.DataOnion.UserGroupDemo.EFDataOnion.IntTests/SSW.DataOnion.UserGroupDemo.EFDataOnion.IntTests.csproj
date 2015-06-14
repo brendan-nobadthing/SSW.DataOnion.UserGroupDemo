@@ -6,14 +6,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{70D28838-2F9F-4F2D-BB08-ED72D3449F6A}</ProjectGuid>
+    <ProjectGuid>{07E07FE9-1945-4A29-8F1A-EEFDBD498CDC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SSW.DataOnion.UserGroupDemo.VanillaEF.IntegrationTests</RootNamespace>
-    <AssemblyName>SSW.DataOnion.UserGroupDemo.VanillaEF.IntegrationTests</AssemblyName>
+    <RootNamespace>SSW.DataOnion.UserGroupDemo.EFDataOnion.IntTests</RootNamespace>
+    <AssemblyName>SSW.DataOnion.UserGroupDemo.EFDataOnion.IntTests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <NuGetPackageImportStamp>12f196c5</NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>3ce94f0f</NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -36,18 +36,19 @@
     <Reference Include="Autofac">
       <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="SSW.Data.Interfaces">
+      <HintPath>..\packages\SSW.Data.Interfaces.2.0.0-beta2\lib\net45\SSW.Data.Interfaces.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -67,34 +68,38 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DropDatabase.cs" />
+    <Compile Include="Autofac\BuildIocContainer.cs" />
+    <Compile Include="Autofac\DataCollection.cs" />
+    <Compile Include="Autofac\DataFixture.cs" />
     <Compile Include="HelloBddfy.cs" />
     <Compile Include="HelloXunit.cs" />
-    <Compile Include="InheritanceTests.cs" />
-    <Compile Include="ManualReferenceLoading.cs" />
-    <Compile Include="IncludeTest.cs" />
-    <Compile Include="LazyLoadingReattachedEntity.cs" />
-    <Compile Include="LazyLoadingFailTest.cs" />
-    <Compile Include="LazyLoadingOff.cs" />
-    <Compile Include="LazyLoadingTests.cs" />
-    <Compile Include="OneToManyTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ManyToManyTest.cs" />
     <Compile Include="StudentSeedTest.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SSW.DataOnion.UserGroupDemo.Domain\SSW.DataOnion.UserGroupDemo.Domain.csproj">
-      <Project>{c9356e55-0268-442f-b4ba-97bc65cfb908}</Project>
-      <Name>SSW.DataOnion.UserGroupDemo.Domain</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SSW.DataOnion.UserGroupDemo.VanillaEF\SSW.DataOnion.UserGroupDemo.VanillaEF.csproj">
-      <Project>{2b4c9bde-2b24-408f-b609-3b033b13a98f}</Project>
-      <Name>SSW.DataOnion.UserGroupDemo.VanillaEF</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SSW.DataOnion.UserGroupDemo.DataInterfaces\SSW.DataOnion.UserGroupDemo.DataInterfaces.csproj">
+      <Project>{ffe3e05c-1d91-479e-9302-1050e8f1ec05}</Project>
+      <Name>SSW.DataOnion.UserGroupDemo.DataInterfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SSW.DataOnion.UserGroupDemo.DependencyResolution\SSW.DataOnion.UserGroupDemo.DependencyResolution.csproj">
+      <Project>{141661dc-eaad-46ab-ae00-18c1551ddd41}</Project>
+      <Name>SSW.DataOnion.UserGroupDemo.DependencyResolution</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SSW.DataOnion.UserGroupDemo.Domain\SSW.DataOnion.UserGroupDemo.Domain.csproj">
+      <Project>{c9356e55-0268-442f-b4ba-97bc65cfb908}</Project>
+      <Name>SSW.DataOnion.UserGroupDemo.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SSW.DataOnion.UserGroupDemo.EFDataOnion\SSW.DataOnion.UserGroupDemo.EFDataOnion.csproj">
+      <Project>{319028ff-7a00-4006-b93c-7ad0b875e003}</Project>
+      <Name>SSW.DataOnion.UserGroupDemo.EFDataOnion</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
