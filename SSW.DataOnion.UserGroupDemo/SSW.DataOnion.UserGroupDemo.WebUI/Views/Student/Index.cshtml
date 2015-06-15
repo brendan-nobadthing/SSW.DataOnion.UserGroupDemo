@@ -1,4 +1,5 @@
 ﻿
+@using SSW.DataOnion.UserGroupDemo.Domain
 @model IEnumerable<SSW.DataOnion.UserGroupDemo.Domain.Student>
 
 @{
@@ -10,12 +11,24 @@
 
 <table class="table table-striped table-bordered table-responsive">
 
+
+    <tr>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Activities</th>
+        <th></th>
+    </tr>
+
     @*Danger! iterating over a colleciton of entities with lazy loading  *@
     @foreach (var student in Model)
     {
         <tr>
             <td>@student.FirstName</td>
             <td>@student.LastName</td>
+            <td>@student.Activities.Count()</td>
+            <td>
+                <a href="~/Student/Edit/@student.Id" class=""><i class="glyphicon glyphicon-edit"></i></a>
+            </td>
 
         </tr>
         
