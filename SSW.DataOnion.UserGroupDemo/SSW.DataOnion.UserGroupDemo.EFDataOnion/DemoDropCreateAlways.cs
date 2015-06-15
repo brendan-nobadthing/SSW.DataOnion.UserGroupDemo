@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using SSW.DataOnion.UserGroupDemo.Domain;
@@ -14,7 +15,7 @@ namespace SSW.DataOnion.UserGroupDemo.EFDataOnion
 
             if (!context.Students.Any())
             {
-                context.Students.Add(new Student()
+                var brendan = context.Students.Add(new Student()
                 {
                     FirstName = "Brendan",
                     LastName = "Richards",
@@ -22,7 +23,7 @@ namespace SSW.DataOnion.UserGroupDemo.EFDataOnion
                 });
 
 
-                context.Students.Add(new Student()
+                var adam = context.Students.Add(new Student()
                 {
                     FirstName = "Adam",
                     LastName = "Cogan",
@@ -30,10 +31,15 @@ namespace SSW.DataOnion.UserGroupDemo.EFDataOnion
                 });
 
 
-                context.Courses.Add(new Course()
+                var course = context.Courses.Add(new Course()
                 {
                     Title = "How To Win"
                 });
+
+                brendan.Courses = new List<Course>();
+                adam.Courses = new List<Course>();
+                brendan.Courses.Add(course);
+                adam.Courses.Add(course);
 
                 context.Schools.Add(new School()
                 {

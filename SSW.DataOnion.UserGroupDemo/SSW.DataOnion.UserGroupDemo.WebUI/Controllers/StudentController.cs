@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using SSW.Data.Interfaces;
 using SSW.DataOnion.UserGroupDemo.DataInterfaces.Repositories;
 using SSW.DataOnion.UserGroupDemo.Domain;
+using SSW.DataOnion.UserGroupDemo.WebUI.ViewModels;
 
 namespace SSW.DataOnion.UserGroupDemo.WebUI.Controllers
 {
@@ -15,41 +16,35 @@ namespace SSW.DataOnion.UserGroupDemo.WebUI.Controllers
     public class StudentController : Controller
     {
 
-        private readonly IStudentRepository _studentRepository;
+        private readonly IStudentVmMapper _studentVmMapper;
         private readonly IUnitOfWork _unitOfWork;
 
-        public StudentController(IStudentRepository studentRepository, IUnitOfWork unitOfWork)
+        public StudentController(IUnitOfWork unitOfWork, 
+            IStudentVmMapper studentVmMapper)
         {
-            _studentRepository = studentRepository;
             _unitOfWork = unitOfWork;
+            _studentVmMapper = studentVmMapper;
         }
 
         // GET: Default
         public ActionResult Index()
         {
-            return View(_studentRepository.Get());
+            return View(_studentVmMapper.GetList());
         }
 
 
         [HttpGet]
         public ActionResult Edit(int id)
         {
-            var student = _studentRepository.Find(id);
-            return View(student);
+            return View(_studentVmMapper.GetViewModel(id));
         }
 
-
         [HttpPost]
-        public ActionResult Edit(Student model)
+        public ActionResult Edit(StudentVm model)
         {
-
             if (ModelState.IsValid)
             {
-
-                var entity = _studentRepository.Find(model.Id);
-                entity.FirstName = model.FirstName;
-                entity.LastName = model.LastName;
-
+                _studentVmMapper.SaveViewModel(model);
                 _unitOfWork.SaveChanges();
                 return RedirectToAction("Index");
             }

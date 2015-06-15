@@ -1,6 +1,6 @@
 ﻿
 @using SSW.DataOnion.UserGroupDemo.Domain
-@model IEnumerable<SSW.DataOnion.UserGroupDemo.Domain.Student>
+@model IEnumerable<SSW.DataOnion.UserGroupDemo.WebUI.ViewModels.StudentVm>
 
 @{
     ViewBag.Title = "Index";
@@ -16,6 +16,7 @@
         <th>First name</th>
         <th>Last name</th>
         <th>Activities</th>
+        <th>Courses</th>
         <th></th>
     </tr>
 
@@ -25,7 +26,8 @@
         <tr>
             <td>@student.FirstName</td>
             <td>@student.LastName</td>
-            <td>@student.Activities.Count()</td>
+            <td>@student.CountActivities</td>
+            <td>@student.CountCourses</td>
             <td>
                 <a href="~/Student/Edit/@student.Id" class=""><i class="glyphicon glyphicon-edit"></i></a>
             </td>

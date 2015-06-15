@@ -35,11 +35,17 @@ namespace SSW.DataOnion.UserGroupDemo.WebUI
             // OPTIONAL: Enable property injection into action filters.
             builder.RegisterFilterProvider();
 
+
             builder.RegisterModule(new SSW.DataOnion.UserGroupDemo.DependencyResolution.DataOnionModule(
                 System.Configuration.ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString.ToString()
             ));
 
-            
+
+            // view model mappers
+            builder.RegisterAssemblyTypes(Assembly.GetExecutingAssembly())
+                .Where(t => t.Name.EndsWith("VmMapper"))
+                .AsImplementedInterfaces();
+
 
             // Set the dependency resolver to be Autofac.
             var container = builder.Build();
