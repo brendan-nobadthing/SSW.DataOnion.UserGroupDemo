@@ -8,10 +8,15 @@ using System.Xml.Schema;
 
 namespace SSW.DataOnion.UserGroupDemo.Domain
 {
-    public class Student
+    public class Student : IVersionTrackedEntity
     {
 
         public int Id { get; set; }
+
+
+        [Timestamp]
+        public byte[] RowVersion { get; set; }
+
 
         [MaxLength(111)]
         public string FirstName { get; set; }

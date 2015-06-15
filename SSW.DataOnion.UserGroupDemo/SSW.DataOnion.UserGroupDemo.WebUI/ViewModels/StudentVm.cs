@@ -22,6 +22,16 @@ namespace SSW.DataOnion.UserGroupDemo.WebUI.ViewModels
 
         public int CountActivities { get; set; }
 
+
+        public byte[] RowVersion { get; set; }
+
+        public string RowVersionBase64
+        {
+            get { return this.RowVersion == null ? null : Convert.ToBase64String(this.RowVersion); }
+            set { this.RowVersion = Convert.FromBase64String(value); }
+        }
+
+
     }
 
 
@@ -73,6 +83,7 @@ namespace SSW.DataOnion.UserGroupDemo.WebUI.ViewModels
 
             entity.FirstName = model.FirstName;
             entity.LastName = model.LastName;
+            entity.RowVersion = model.RowVersion;
 
             return entity;
         }
@@ -94,7 +105,8 @@ namespace SSW.DataOnion.UserGroupDemo.WebUI.ViewModels
                     FirstName = s.FirstName,
                     LastName = s.LastName,
                     CountActivities = s.Activities.Count(), 
-                    CountCourses = s.Courses.Count()
+                    CountCourses = s.Courses.Count(),
+                    RowVersion = s.RowVersion
                 };
             }
         }

@@ -13,6 +13,8 @@
     {
 
         @Html.HiddenFor(m => m.Id)
+        
+        @Html.HiddenFor(m=> m.RowVersionBase64)
 
         <div class="form-group">
             @Html.LabelFor(m => m.FirstName, "First Name", new {@class = "control-label col-md-3"})

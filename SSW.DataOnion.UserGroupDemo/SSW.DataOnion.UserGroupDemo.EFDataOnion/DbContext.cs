@@ -1,3 +1,5 @@
+using SSW.DataOnion.UserGroupDemo.Domain;
+
 namespace SSW.DataOnion.UserGroupDemo.EFDataOnion
 {
     using System;
@@ -76,5 +78,29 @@ namespace SSW.DataOnion.UserGroupDemo.EFDataOnion
             modelBuilder.Configurations.AddFromAssembly(Assembly.GetExecutingAssembly());
             base.OnModelCreating(modelBuilder);
         }
+
+
+
+        public override int SaveChanges()
+        {
+
+            // concurrency check for IPersistentEntity - we need to copy the posted rowversion to entity's original values.
+            var changedPersistentEntities = ChangeTracker.Entries()
+                .Where(
+                    x =>
+                        x.Entity is IVersionTrackedEntity && x.State == EntityState.Modified)
+                .ToList();
+            foreach (var e in changedPersistentEntities)
+            {
+                if (e.OriginalValues["RowVersion"] != e.CurrentValues["RowVersion"])
+                {
+                    e.OriginalValues["RowVersion"] = ((IVersionTrackedEntity)e.Entity).RowVersion;
+                }
+            }
+
+            return base.SaveChanges();
+        }
+
+
     }
 }
