@@ -50,7 +50,11 @@ namespace SSW.DataOnion.UserGroupDemo.DependencyResolution
                 .As<IDbContextManager>()
                 .InstancePerLifetimeScope();
 
-            builder.RegisterType<UnitOfWork>().As<IUnitOfWork>();
+            builder.Register(c => new UnitOfWork(new List<IDbContextManager>()
+            {
+                c.Resolve<IDbContextManager<DataOnionDbContext>>()
+            }))
+            .As<IUnitOfWork>();
 
 
 

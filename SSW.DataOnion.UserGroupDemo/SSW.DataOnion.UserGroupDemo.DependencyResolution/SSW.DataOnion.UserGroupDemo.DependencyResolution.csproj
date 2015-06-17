@@ -48,14 +48,24 @@
     <Reference Include="log4net">
       <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
     </Reference>
+    <Reference Include="Serilog">
+      <HintPath>..\packages\Serilog.1.5.7\lib\net45\Serilog.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.FullNetFx">
+      <HintPath>..\packages\Serilog.1.5.7\lib\net45\Serilog.FullNetFx.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Sinks.Seq">
+      <HintPath>..\packages\Serilog.Sinks.Seq.1.5.14\lib\net45\Serilog.Sinks.Seq.dll</HintPath>
+    </Reference>
     <Reference Include="SSW.AnalyticsInterface.Core">
       <HintPath>..\packages\SSW.AnalyticsInterface.Core.1.0.3.0\lib\net45\SSW.AnalyticsInterface.Core.dll</HintPath>
     </Reference>
     <Reference Include="SSW.Common">
       <HintPath>..\packages\SSW.Common.1.0.5317.31877\lib\net45\SSW.Common.dll</HintPath>
     </Reference>
-    <Reference Include="SSW.Data.EF">
-      <HintPath>..\packages\SSW.Data.EF.2.0.0-beta\lib\net45\SSW.Data.EF.dll</HintPath>
+    <Reference Include="SSW.Data.EF, Version=2.0.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SSW.Data.EF.2.0.1-beta\lib\net45\SSW.Data.EF.dll</HintPath>
     </Reference>
     <Reference Include="SSW.Data.Interfaces">
       <HintPath>..\packages\SSW.Data.Interfaces.2.0.0-beta2\lib\net45\SSW.Data.Interfaces.dll</HintPath>
@@ -72,6 +82,7 @@
   <ItemGroup>
     <Compile Include="DataOnionModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SerilogModule.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -25,7 +25,7 @@ namespace SSW.DataOnion.UserGroupDemo.Domain
         public string LastName { get; set; }
 
 
-        public DateTime DateOfBirth { get; set; }
+        public String Email { get; set; }
 
 
         public virtual ICollection<Enrolment> Enrolments { get; set; }

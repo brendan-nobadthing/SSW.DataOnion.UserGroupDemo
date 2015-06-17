@@ -52,6 +52,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\NuGet.Core.2.8.3\lib\net40-Client\NuGet.Core.dll</HintPath>
     </Reference>
+    <Reference Include="Serilog">
+      <HintPath>..\packages\Serilog.1.5.7\lib\net45\Serilog.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.FullNetFx">
+      <HintPath>..\packages\Serilog.1.5.7\lib\net45\Serilog.FullNetFx.dll</HintPath>
+    </Reference>
     <Reference Include="SSW.AnalyticsInterface.Core">
       <HintPath>..\packages\SSW.AnalyticsInterface.Core.1.0.3.0\lib\net45\SSW.AnalyticsInterface.Core.dll</HintPath>
     </Reference>
@@ -61,8 +67,9 @@
     <Reference Include="SSW.Data.DbContext.Generator">
       <HintPath>..\packages\SSW.Data.DbContext.Generator.1.2.13.0\lib\net45\SSW.Data.DbContext.Generator.dll</HintPath>
     </Reference>
-    <Reference Include="SSW.Data.EF">
-      <HintPath>..\packages\SSW.Data.EF.2.0.0-beta\lib\net45\SSW.Data.EF.dll</HintPath>
+    <Reference Include="SSW.Data.EF, Version=2.0.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SSW.Data.EF.2.0.1-beta\lib\net45\SSW.Data.EF.dll</HintPath>
     </Reference>
     <Reference Include="SSW.Data.Entities">
       <HintPath>..\packages\SSW.Data.Entities.1.2.6.0\lib\net45\SSW.Data.Entities.dll</HintPath>
@@ -96,6 +103,7 @@
       <DependentUpon>Repositories.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\StudentRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

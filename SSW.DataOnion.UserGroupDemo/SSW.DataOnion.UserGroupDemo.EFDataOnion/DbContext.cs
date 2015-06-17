@@ -1,3 +1,4 @@
+using Serilog;
 using SSW.DataOnion.UserGroupDemo.Domain;
 
 namespace SSW.DataOnion.UserGroupDemo.EFDataOnion
@@ -18,14 +19,7 @@ namespace SSW.DataOnion.UserGroupDemo.EFDataOnion
     /// </summary>
     public partial class DataOnionDbContext : DbContext
     {
-        ///// <summary>
-        ///// Initializes a new instance of the <see cref="YourDbContext"/> class.
-        ///// </summary>
-        //public YourDbContext()
-        //    : base("name=YourConnectionStringName")
-        //{
-            
-        //}
+        private ILogger _log = Log.ForContext<DataOnionDbContext>();
 
         /// <summary>
         /// Initializes a new instance of the <see cref="YourDbContext" /> class.
@@ -83,6 +77,7 @@ namespace SSW.DataOnion.UserGroupDemo.EFDataOnion
 
         public override int SaveChanges()
         {
+            
 
             // concurrency check for IPersistentEntity - we need to copy the posted rowversion to entity's original values.
             var changedPersistentEntities = ChangeTracker.Entries()

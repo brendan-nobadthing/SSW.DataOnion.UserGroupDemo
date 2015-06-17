@@ -26,7 +26,6 @@ namespace SSW.DataOnion.UserGroupDemo.VanillaEF.Migrations
                 {
                     FirstName = "Brendan",
                     LastName = "Richards",
-                    DateOfBirth = new DateTime(2002, 05, 12)
                 });
 
 
@@ -34,7 +33,6 @@ namespace SSW.DataOnion.UserGroupDemo.VanillaEF.Migrations
                 {
                     FirstName = "Adam",
                     LastName = "Cogan",
-                    DateOfBirth = new DateTime(2004, 03, 2)
                 });
 
 

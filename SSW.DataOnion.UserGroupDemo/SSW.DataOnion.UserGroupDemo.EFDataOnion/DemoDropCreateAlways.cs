@@ -19,7 +19,7 @@ namespace SSW.DataOnion.UserGroupDemo.EFDataOnion
                 {
                     FirstName = "Brendan",
                     LastName = "Richards",
-                    DateOfBirth = new DateTime(2002, 05, 12)
+                    
                 });
 
 
@@ -27,7 +27,7 @@ namespace SSW.DataOnion.UserGroupDemo.EFDataOnion
                 {
                     FirstName = "Adam",
                     LastName = "Cogan",
-                    DateOfBirth = new DateTime(2004, 03, 2)
+                    
                 });
 
 

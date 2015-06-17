@@ -20,7 +20,6 @@ namespace SSW.DataOnion.UserGroupDemo.VanillaEF
             {
                 FirstName = "Brendan",
                 LastName = "Richards",
-                DateOfBirth = new DateTime(1977, 01, 11)
             });
 
 

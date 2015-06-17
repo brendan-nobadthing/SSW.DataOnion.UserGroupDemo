@@ -37,6 +37,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\NuGet.Core.2.8.3\lib\net40-Client\NuGet.Core.dll</HintPath>
     </Reference>
+    <Reference Include="Serilog">
+      <HintPath>..\packages\Serilog.1.5.7\lib\net45\Serilog.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.FullNetFx">
+      <HintPath>..\packages\Serilog.1.5.7\lib\net45\Serilog.FullNetFx.dll</HintPath>
+    </Reference>
     <Reference Include="SSW.Data.Entities">
       <HintPath>..\packages\SSW.Data.Entities.1.2.6.0\lib\net45\SSW.Data.Entities.dll</HintPath>
     </Reference>
@@ -60,7 +66,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RepositoryInterfaces.tt</DependentUpon>
     </Compile>
+    <Compile Include="Import\IImportStudents.cs" />
+    <Compile Include="IObjectDataSource.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\IStudentRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Generated\Configurations\RepositoryInterfacesConfigurations.ttinclude" />
