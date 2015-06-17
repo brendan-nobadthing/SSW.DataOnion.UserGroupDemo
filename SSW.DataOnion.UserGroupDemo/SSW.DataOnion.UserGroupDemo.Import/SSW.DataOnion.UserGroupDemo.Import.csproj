@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="CsvStudentDataSource.cs" />
     <Compile Include="BetterImportStudents.cs" />
+    <Compile Include="BulkInsertImport.cs" />
     <Compile Include="ExtendedRepositoryImport.cs" />
     <Compile Include="SlowImportStudents.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

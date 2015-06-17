@@ -76,6 +76,7 @@
     <Compile Include="Autofac\BuildIocContainer.cs" />
     <Compile Include="Autofac\DataCollection.cs" />
     <Compile Include="Autofac\DataFixture.cs" />
+    <Compile Include="BulkInsertImportTest.cs" />
     <Compile Include="ExtendedRepositoryImportTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BetterImportStudentTest.cs" />
